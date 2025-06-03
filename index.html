@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/solar_system_cursor/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Interactive 3D Solar System</title>
+    <script type="module" crossorigin src="/solar_system_cursor/assets/index-5Kqz7f1r.js"></script>
+    <link rel="stylesheet" crossorigin href="/solar_system_cursor/assets/index-BEAv7lhC.css">
+  </head>
+  <body>
+    <div id="app">
+      <div id="info-panel">
+        <h1>Solar System Explorer</h1>
+        <div id="planet-info"></div>
+        <div id="simulation-controls">
+          <button id="play-pause-button">Pause</button>
+          <label for="speed-slider">Speed:</label>
+          <input type="range" id="speed-slider" min="0.1" max="5" step="0.1" value="1">
+          <span id="speed-value">1.0x</span>
+        </div>
+      </div>
+      
+      <div class="controls-panel">
+        <div class="toggle-group">
+          <input type="checkbox" id="label-toggle" checked>
+          <label for="label-toggle">Show Labels</label>
+        </div>
+        <div class="toggle-group">
+          <input type="checkbox" id="orbit-toggle" checked>
+          <label for="orbit-toggle">Show Orbits</label>
+        </div>
+        <div class="toggle-group">
+          <input type="checkbox" id="constellation-toggle">
+          <label for="constellation-toggle">Show Constellations</label>
+        </div>
+        
+        <div class="time-controls">
+          <h3>Time Controls</h3>
+          <div>
+            <button id="current-time">Current Time</button>
+            <button id="equinox">Next Equinox</button>
+            <button id="solstice">Next Solstice</button>
+          </div>
+        </div>
+        
+        <button id="quiz-button">Start Quiz Mode</button>
+        <button id="educational-button">Educational Info</button>
+      </div>
+      
+      <div id="canvas-container"></div>
+      
+      <div class="educational-overlay" id="educational-overlay">
+        <button class="close-btn">&times;</button>
+        <h3>Educational Content</h3>
+        <div class="educational-content" id="educational-content"></div>
+      </div>
+      
+      <div class="quiz-container" id="quiz-container">
+        <button class="close-btn" id="close-quiz">&times;</button>
+        <h2>Solar System Quiz</h2>
+        <div class="quiz-question" id="quiz-question"></div>
+        <div class="quiz-options" id="quiz-options"></div>
+        <div class="quiz-buttons">
+          <button id="skip-question">Skip</button>
+          <button id="next-question" disabled>Next</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
